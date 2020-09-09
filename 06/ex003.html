@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+</head>
+    <style>
+        body {
+            background-color: rgb(53, 65, 65); /*comentário em css */
+            color: white;
+            font: normal 20px Arial;}
+        h1 {
+            color:rgb(122, 142, 201);
+        }
+    </style>
+<body>
+    <h1>Olá,Mundo</h1> <!--Comentário em html-->
+    <p>Agora estou liberto da maldição</p>
+
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outor número'))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // conversão de number para string! neste caso é apenas uma demonstração, ela não é necessária na pagina.
+        // number + number = para adição
+        // string + string = para concatenação
+        // o próprio window.prompt trata os valores como string, por isso deve haver a conversão!
+    </script>
+    
+</body>
+</html>

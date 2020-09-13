@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia </title>
+    <title>Verificador de idade </title>
 
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="script.js">
 </head>
 
-<body onload="carregar()">
-    <header id="title">
-        <h1>Olá!</h1>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
     </header>
 
     <section>
 
-        <div id="msg">
-            Aqui vai mudar a mensagem...
+        <div>
+            <p> Ano de nascimento
+                <input type="ano" name="txtano" id="txtano" min="0">
+            </p>
+            
+            <p>Sexo
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem"></label>
+
+            </p>
+
+            <input type="button" value="Verificar" onclick="verificar()">
         </div>
-        <div id="img">
-            <img id="imagem"  src="/Aula 11 - Condições/Exercícios Adicionais/ex.014/depraia.svg" alt="de-praia">
+        <div id="res">
+            <p>Preencha os dados acima para obter o resultado</p>
+
         </div>
 
     </section>
 
     <footer>
-        <p>&copy; Curso em Vídeo</p>
+        <p>&copy;CursoemVideo</p>
     </footer>
 
     <script src="script.js"></script>

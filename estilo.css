@@ -29,3 +29,12 @@ footer {
 
     font-style: italic;
 }
+
+img {
+  
+    max-inline-size: min-content;
+}
+
+div {
+    padding: 10px;
+ }

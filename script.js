@@ -1,30 +1,49 @@
-function carregar () {
+function verificar() {
+    var data = new Date
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.querySelector('div#res')
 
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var tittlle = window.document.getElementById('title')
-
-    var data = new Date()
-    var min = data.getMinutes()
-    var hora = data.getHours()
-
-    msg.innerHTML= `Agora são ${hora}:${min} minutos`
-
-   
-    if (hora >= 0 && hora < 12) {
-        img.src = '/Aula 11 - Condições/Exercícios Adicionais/ex.014/depraia.svg'
-    } else if (hora >= 12 && hora <= 18) {
-        //BOA TARDE
-        img.src = '/Aula 11 - Condições/Exercícios Adicionais/ex.014/pordosol.svg'
-        document.body.style.background = '#FA8072'
-       
-        tittlle.style.font = 'medium monospace;'
-        
+    if (fano.value.length = 0 || fano.value > ano) {
+        window.alert('[ERRO] Verifique os dados novamente.')
     } else {
-        //BOA NOITE
-        img.src = '/Aula 11 - Condições/Exercícios Adicionais/ex.014/rio.svg'
-        document.body.style.background = '#2D2B4C'
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(fano.value)
+        var gênero = ''
+        var img = document.createElement('img') //criando uma tag 'img' (como em html).
+        img.setAttribute('id', 'foto') // adicionando atributos a tag, como um id neste caso.
+        
+        
+
+        if (fsex[0].checked) {
+            gênero = 'Homem'
+
+            if(idade >= 0 && idade < 18){
+                img.setAttribute('src', 'menino.png')
+            } //menino
+            if(idade >= 18 && idade < 40){
+                img.setAttribute('src', 'homem.png')
+            } //homem adulto
+            if(idade > 40){
+                img.setAttribute('src', 'senhor.png')
+            } //homem idoso
+        } else if (fsex[1].checked) {
+            gênero = 'Mulher'
+
+            if(idade >= 0 && idade < 18){
+                img.setAttribute('src', 'menina.png')
+            } //menina
+            if(idade >= 18 && idade < 40){
+                img.setAttribute('src', 'mulher.png')
+            } //mulher adulta
+            if(idade > 40){
+                img.setAttribute('src', 'senhora.png')
+            } //mulher idosa
+        }
+    
+        res.style.textAlign = 'center'
+        res.innerHTML = `${gênero} de ${idade} anos`
+        res.appendChild(img) // para encaixar a imagem abaixo do resultado descrito.
+    
     }
-
-
 }

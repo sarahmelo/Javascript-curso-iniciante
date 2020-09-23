@@ -29,3 +29,8 @@ footer {
 
     font-style: italic;
 }
+
+input#butt {
+    width: 60px;
+    margin-top: 20px;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de idade </title>
+    <title>Contador </title>
 
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="script.js">
@@ -11,35 +11,26 @@
 
 <body>
     <header>
-        <h1>Verificador de idade</h1>
+        <h1>Contador</h1>
     </header>
 
     <section>
 
-        <div>
-            <p> Ano de nascimento
-                <input type="ano" name="txtano" id="txtano" min="0">
-            </p>
-            
-            <p>Sexo
-                <input type="radio" name="radsex" id="masc" checked>
-                <label for="masc">Masculino</label>
-                <input type="radio" name="radsex" id="fem">
-                <label for="fem">Feminino</label>
-
-            </p>
-
-            <input type="button" value="Verificar" onclick="verificar()">
+        <div id="dados"> 
+           <p>Início: <input type="number" name="inicio" id="txti"></p>
+           <p>Fim: <input type="number" name="fim" id="txtf"></p>
+           <p>Passo: <input type="number" name="passo" id="txtp"></p>
+           <input type="button" value="Contar" onclick="contar()">
         </div>
         <div id="res">
-            <p>Preencha os dados acima para obter o resultado</p>
-
+            
+            <p>Preparando a contagem...</p>
         </div>
 
     </section>
 
     <footer>
-        <p>&copy;CursoemVideo</p>
+        <p>Curso em Vídeo</p>
     </footer>
 
     <script src="script.js"></script>

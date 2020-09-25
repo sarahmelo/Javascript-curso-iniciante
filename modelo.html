@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador </title>
+    <title>Modelo de Exercício </title>
 
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="script.js">
@@ -11,20 +11,17 @@
 
 <body>
     <header>
-        <h1>Contador</h1>
+        <h1>Tabuada</h1>
     </header>
 
     <section>
 
-        <div id="dados"> 
-           <p>Início: <input type="number" name="inicio" id="txti"></p>
-           <p>Fim: <input type="number" name="fim" id="txtf"></p>
-           <p>Passo: <input type="number" name="passo" id="txtp"></p>
-           <input type="button" value="Contar" onclick="contar()">
+        <div>
+            <p>Número: <input type="number" name="num" id="txtn">
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
         </div>
-        <div id="res">
-            
-            <p>Preparando a contagem...</p>
+        <div>
+            <select name="tabuada" id="seltab" size="10"></select>
         </div>
 
     </section>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>  
+    <div id="box">
+    
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro :<input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    </div>
+
+    <script>
+        function calcular()   {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p> Sua velocidade atual é de <strong> ${vel}km/h </strong> </p>`
+            if (vel > 60)   {
+                res.innerHTML += `Você ultrapassou a velocidade permitida, MULTADO!`
+
+            }
+            /*strong = negrito
+            += se não ele irá apagar a mensagem anterior colocando apenas o = */
+
+            res.innerHTML += `<p> Dirija sempre com sinto de segurança! </p>`
+
+        }
+
+    </script>
+
+    <style>
+
+body{
+            background: #EBE6EF;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        div#box{
+            justify-content: center;
+            display: grid;
+            background-color: #353338;
+            width: 500px;
+            color: aliceblue;
+            border: none;
+            border-radius: 8px;
+            height: 400px;
+        }
+
+        div#res{
+            margin-top: 10px;
+            color: aliceblue;
+        }
+
+        input#txtvel {
+            height: 25px;
+        }
+
+        input { height: 30px;}
+
+    </style>
+    
+</body>
+</html>

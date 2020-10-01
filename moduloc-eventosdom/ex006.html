@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        
+        div#area{
+            background-color: blueviolet ;
+            color: rgb(240, 248, 255);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
+            
+
+            width: 100px;
+            height: 100px;
+
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+        function clicar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou'
+            a.style.background = '#FF0080'
+            a.style.boxShadow = 'inset 0px 4px 6px rgba(0, 0, 0, 0.25)'
+
+            
+        }
+
+        function entrar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou'
+            a.style.background = 'purple'
+        }
+
+        function sair() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Saiu'
+            a.style.background = '#AC58FA'
+            a.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.50)'
+        }
+
+
+    </script>
+</body>
+</html>
